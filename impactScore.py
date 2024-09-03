@@ -31,7 +31,7 @@ def extract_impact_score(cve_data):
     return cve_id, scores
 
 # Path to dataset folder
-dataset_folder = './NVD-Database/2022'
+dataset_folder = './dataset_fw'
 
 # Get list of JSON files in the dataset folder
 json_files = [file for file in os.listdir(dataset_folder) if file.endswith('.json')]

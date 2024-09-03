@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load dataset from CSV
-dataset = pd.read_csv("csv_sw+fw.csv")
+dataset = pd.read_csv("csv_sw_fw.csv")
 
 # Create the box plot
 sns.set_theme(style="whitegrid")
@@ -18,7 +18,7 @@ sns.violinplot(data=dataset, x='exploitability', orient='h', y='year', hue='type
 # Save the plot as a PDF
 # plt.savefig("base_box_plot.pdf", format='pdf')
 #plt.savefig("impact_box_plot.pdf", format='pdf')
-plt.savefig("exploitability_box_plot.pdf", format='pdf')
+plt.savefig("exploitability_box_plot_new.pdf", format='pdf')
 
 
 
