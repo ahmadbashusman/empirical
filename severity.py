@@ -47,7 +47,7 @@ def extract_severity(cve_data):
     return severities
 
 # Path to dataset folder
-dataset_folder = './dataset_fw'
+dataset_folder = './overall8'
 
 # Get list of JSON files in the dataset folder
 json_files = [file for file in os.listdir(dataset_folder) if file.endswith('.json')]
