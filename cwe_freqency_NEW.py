@@ -36,7 +36,7 @@ def has_multiple_cwe(cwes):
     return len(cwes) > 1
 
 # Path to dataset folder
-dataset_folder = './51xxx'
+dataset_folder = './overall'
 
 # Get list of JSON files in the dataset folder
 json_files = [file for file in os.listdir(dataset_folder) if file.endswith('.json')]
@@ -71,11 +71,13 @@ for file_name in json_files:
     if has_multiple_cwe(cwes):
         files_with_multiple_cwes.append(file_name)
 
-    print(file_name, len(cwes))
+    # Disable the printing when running the overall vulnerabilities
+    #print(file_name, len(cwes))
     
     # Count CWE identifiers for current file
+    # Disable the printing when running the overall vulnerabilities
     for cwe in cwes:
-        print(file_name, cwe)
+        #print(file_name, cwe)
         cwe_counter[cwe] += 1
 
     # Accumulate counts to total counter
@@ -89,8 +91,11 @@ print("Total CWE Frequency:")
 for cwe, count in total_cwe_counter.most_common():
     print(f"{cwe}: {count}")
 
+
+
+# Disable some printing when running the overall vulnerabilities
 print(f"Total CVE analyzed: {len(json_files)}")
-print(f"Total files with zero CWEs: {zero_cwe_count}")
-print(f"Files with multiple CWEs: {len(files_with_multiple_cwes)}")
-for file_name in files_with_multiple_cwes:
-    print(file_name)
+#print(f"Total files with zero CWEs: {zero_cwe_count}")
+#print(f"Files with multiple CWEs: {len(files_with_multiple_cwes)}")
+#for file_name in files_with_multiple_cwes:
+ #   print(file_name)

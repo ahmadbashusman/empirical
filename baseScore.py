@@ -35,7 +35,7 @@ def extract_base_score(cve_data):
     return cve_id, scores
 
 # Path to dataset folder
-dataset_folder = './dataset_fw'
+dataset_folder = './dataset_w'
 
 # Get list of JSON files in the dataset folder
 json_files = [file for file in os.listdir(dataset_folder) if file.endswith('.json')]
