@@ -25,7 +25,7 @@ def contains_keywords(cve_data, keywords):
 dataset_folder = './dataset_sw'
 
 # Keywords to search for
-keywords = ["ssl"]
+keywords = ["cvssV3_0, cvssV3_1, cvssV2_0"]
 
 # Get list of JSON files in the dataset folder
 json_files = [file for file in os.listdir(dataset_folder) if file.endswith('.json')]
