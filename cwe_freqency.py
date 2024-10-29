@@ -36,7 +36,7 @@ def has_multiple_cwe(cwes):
     return len(cwes) > 1
 
 # Path to dataset folder
-dataset_folder = 'dataset_sw'
+dataset_folder = './dataset_sw'
 
 # Get list of JSON files in the dataset folder
 json_files = [file for file in os.listdir(dataset_folder) if file.endswith('.json')]
@@ -94,8 +94,11 @@ for cwe, count in total_cwe_counter.most_common():
 
 
 # Disable some printing when running the overall vulnerabilities
-print(f"Total CVE analyzed: {len(json_files)}")
-print(f"Total files with zero CWEs: {zero_cwe_count}")
-print(f"Files with multiple CWEs: {len(files_with_multiple_cwes)}")
-for file_name in files_with_multiple_cwes:
-    print(file_name)
+print(f"Total JSON files found: {len(json_files)}")
+print(f"TJSON files missing 'cweId' field: {zero_cwe_count}")
+print(f"Total JSON files considered: {len(json_files)-zero_cwe_count}")
+
+# Disable some printing when running the overall vulnerabilities
+#print(f"Files with multiple CWEs: {len(files_with_multiple_cwes)}")
+#for file_name in files_with_multiple_cwes:
+ #   print(file_name)
