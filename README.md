@@ -2,6 +2,6 @@
 
 cleaning and preparing description
 
-## some statics in the following files
+## some statistical analysis can be found in the following files
 
 Empirical_Updates.xlsx
