@@ -5,8 +5,8 @@ of Software and Firmware Vulnerabilities
 
 
 ## 0. Overview:
-This repository accompanies the research paper "Update at Your Own Risk: An Empirical Analysis of Software and Firmware Vulnerabilities"
-We present an emperical anaylsis of the causes of the update process vulnerabilities in computing systmes, laragly on IoT devices.
+This repository accompanies the artifacts of the research paper "Update at Your Own Risk: An Empirical Analysis of Software and Firmware Vulnerabilities"
+We present an emperical anaylsis of the potential causes of  update process vulnerabilities in computing systmes, laragly on IoT devices, and provide strategic appraoch on how to mitigate them.
 
 
 ## 1. Update Process Vulnerability Analysis (RQ1):
@@ -25,7 +25,7 @@ We present an emperical anaylsis of the causes of the update process vulnerabili
 ...
 
 ## Replicability
-More details on how to use this repo is on the way.
-Some statistical analysis can be found in the following files
+More details on how to replicate this repo is on the way.
+Some statistical analysis can be found in the following file:
 
 Empirical_Updates.xlsx
