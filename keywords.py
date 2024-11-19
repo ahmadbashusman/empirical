@@ -10,22 +10,23 @@ def load_json_file(file_path):
         print(f"File not found: {file_path}")
         return None
 
-# Function to check for keywords in the JSON file
+# Function to check for keywords in the JSON file descriptions
 def contains_keywords(cve_data, keywords):
-    # Try to extract the descriptions list from the 'containers.cna.descriptions' field
+    # Extract the descriptions list from the 'containers.cna.descriptions' field
     descriptions = cve_data.get('containers', {}).get('cna', {}).get('descriptions', [])
     
     for item in descriptions:
         text = item.get('value', '').lower()  # Extract the description text
-        if all(keyword.lower() in text for keyword in keywords):
+        # Check if any keyword is present in the text
+        if any(keyword.lower() in text for keyword in keywords):
             return True
     return False
 
 # Path to dataset folder
 dataset_folder = './dataset_sw'
 
-# Keywords to search for
-keywords = ["cvssV3_0, cvssV3_1, cvssV2_0"]
+# Keywords to search for exmaple:
+keywords = ["software update", "firmware update", "OTA", "upgrade process", "over-the-air"]
 
 # Get list of JSON files in the dataset folder
 json_files = [file for file in os.listdir(dataset_folder) if file.endswith('.json')]
